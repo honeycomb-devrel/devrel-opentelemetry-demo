@@ -46,12 +46,12 @@ jobs:
       AWS_REGION: eu-west-1
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: 20.x
       - uses: pulumi/actions@v6
-      - uses: pulumi/auth-actions@v1
+      - uses: pulumi/auth-actions@v2
         with:
           organization: ${{ secrets.PULUMI_ORG }}
           requested-token-type: urn:pulumi:token-type:access_token:personal
@@ -68,7 +68,7 @@ jobs:
           npm ci
         working-directory: deploy
 
-      - uses: pulumi/actions@v5
+      - uses: pulumi/actions@v6
         id: pulumi-deploy-aws
         with:
           command: up
