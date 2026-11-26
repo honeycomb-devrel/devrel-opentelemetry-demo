@@ -193,6 +193,7 @@ anyio==4.15.1 \
     --hash=sha256:6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101 \
     --hash=sha256:9f28306018cbd6d329e64a36d58256edff76dd996fe423bc957326e578b82a94
     # via
+    #   fastapi
     #   httpx
     #   httpx2
     #   langsmith
@@ -438,6 +439,7 @@ certifi==2026.10.23 \
     # via
     #   httpcore
     #   httpx
+    #   langchain-core
     #   langchain-openai
     #   requests
 cffi==2.1.1 \
@@ -789,8 +791,9 @@ cryptography==50.0.2 \
     #   joserfc
     #   pyjwt
     #   secretstorage
-cuid==0.4 \
-    --hash=sha256:74eaba154916a2240405c3631acee708c263ef8fa05a86820b87d0f59f84e978
+cuid2==2.3.0 \
+    --hash=sha256:7409caadbd83682f94eb2a2a7421b29bc72ff3d7535ce914cd134d9703828c2c \
+    --hash=sha256:e9c1bf8a4259e4e76186ee90a8bf785bbf0b6f5b82e1d8516e9da3ae88996820
     # via traceloop-sdk
 cyclopts==5.3.1 \
     --hash=sha256:818258c6d55f8c928f6c3b85fdc94121825f98f6f625c43ae6faabfb121412e1 \
@@ -820,9 +823,9 @@ exceptiongroup==1.3.1 \
     --hash=sha256:8b412432c6055b0b7d14c310000ae93352ed6754f70fa8f7c34141f91c4e3219 \
     --hash=sha256:a7a39a3bd276781e98394987d3a5701d0c4edffb633bb7a5144577f82c773598
     # via fastmcp-slim
-fastapi==0.162.0 \
-    --hash=sha256:3785963de305dd09912426cb81f2d230fce98ab3521cdfe97265c8d14983128c \
-    --hash=sha256:6a22c1e2e6e32e0633ee7e170f00009a29b8228b16feb219ee42f32fd8d88a8f
+fastapi==0.165.0 \
+    --hash=sha256:896f48462042bb4f162147eb8fac7e858753dc1f486765709baf105d70e4fc5b \
+    --hash=sha256:dd94d4128319c1e1d50535ab023ab698f850a4d2822f0e181747b46f4ff3c0ab
     # via -r requirements.in
 fastmcp==3.4.10 \
     --hash=sha256:68f422db0a7c6228142663f17d9f79a5a12a509e1408a8ac207b3e442e166e38 \
@@ -1146,6 +1149,7 @@ httpx==0.28.1 \
     #   langchain-core
     #   langgraph-sdk
     #   mcp
+    #   traceloop-sdk
 httpx-sse==0.4.3 \
     --hash=sha256:0ac1c9fe3c0afad2e0ebb25a934a59f4c7823b60792691f779fad2c5568830fc \
     --hash=sha256:9b1ed0127459a66014aec3c56bebd93da3c1bc8bb6618c8082039a44889a755d
@@ -1347,13 +1351,13 @@ keyring==25.7.0 \
     --hash=sha256:be4a0b195f149690c166e850609a477c532ddbfbaed96a404d4e43f8d5e2689f \
     --hash=sha256:fe01bd85eb3f8fb3dd0405defdeac9a5b4f6f0439edbb3149577f244a2e8245b
     # via py-key-value-aio
-langchain==1.4.7 \
-    --hash=sha256:818275348cd707f7fbbe92ece0a725c25823140a054cf29865f420e0200fa2af \
-    --hash=sha256:bc40d4a9a46f0c3d75e316c0e576931fe19bceef83912a71dc1e0df781eb8f82
+langchain==1.5.2 \
+    --hash=sha256:63816aee7f55503db5c4f266a0874047d417957ae70cbf27397325c584982c52 \
+    --hash=sha256:e6c2df67337cae4f13b93460e586084ad8c7c7cfd540d27e2572a96308747a7c
     # via -r requirements.in
-langchain-core==1.7.0 \
-    --hash=sha256:c34e53358b103cd73f43c63f5f46f9b5c6c3467efdffcdf134892b89020494e4 \
-    --hash=sha256:e82b24d7ac51fc74874baa29d6b3c0b8234880d4f3d897f8ff57fb80dfd9b07d
+langchain-core==1.8.5 \
+    --hash=sha256:4eb6ee72e5ef130ab0aef0d7dc3ea0f1ab8f974339c271c4c8a8b92f148fcfac \
+    --hash=sha256:f0391367c1058ccec34dc248238415d8fccfa42db1727b937357888ff1da75cb
     # via
     #   langchain
     #   langchain-mcp-adapters
@@ -1366,13 +1370,13 @@ langchain-mcp-adapters==0.3.2 \
     --hash=sha256:094e6b3096dbcc408417d5722f6915f164772e50c502ae3d8989405bf12c3c84 \
     --hash=sha256:61cd1a09597adb619a9bafb0642938ffc2a9463d699a753f7af0420ea46c381a
     # via -r requirements.in
-langchain-openai==1.7.3 \
-    --hash=sha256:0ab77cc4579b87c50823b7ccb5d8af48d6c6ae2084f156dcdc37151fcc0717e6 \
-    --hash=sha256:c1d2d0fbd4f542ddcdf176c07abcf4d86c3b716513929250bbef04e3efc5e0b5
+langchain-openai==1.8.5 \
+    --hash=sha256:53f2612f61290edc115712a887e384dac9984783689d2e2b4ca7fbc75c1e0e64 \
+    --hash=sha256:e5bc9d1da58231496caf2e09c42c5ed21ddc8bb4e2427300c8e8a7b1a8372bf1
     # via -r requirements.in
-langchain-protocol==0.0.20 \
-    --hash=sha256:0f5bd002474265648e91161771a9e0438fe9480bd55a416e51af0f60070637ec \
-    --hash=sha256:3c935e5e46b0f6f9cb52f45ba7cfa53d1b9fa80c82c4a277d47f03e07f7385b1
+langchain-protocol==0.0.22 \
+    --hash=sha256:61267bc9f478c9df35ccdafd9fdf556b2698435232d59def54b3809bb02585bb \
+    --hash=sha256:d264998a507b735320c15a7b366051cbf41e21f771bea1b03a911f2c58af02e7
     # via
     #   langchain-core
     #   langgraph-sdk
@@ -1386,9 +1390,9 @@ langgraph-checkpoint==4.3.1 \
     # via
     #   langgraph
     #   langgraph-prebuilt
-langgraph-prebuilt==1.1.1 \
-    --hash=sha256:f1b1a4772e7f9f15ba736411aad3877183ad40cd9349748df76bd2b9f58a83c7 \
-    --hash=sha256:fae17c22562e501940eb7aa052a15c58a431febbabf33f8ad172e1b44354a7e4
+langgraph-prebuilt==1.1.3 \
+    --hash=sha256:7b55eb1c2004348b73b9af9e2f81e5f3eda47dcf13d885ccb4195538426c55ce \
+    --hash=sha256:7ee72332e925000e3d24d2d491dd0ebb9d3a44dbffe650185943b730a832cf6d
     # via
     #   -r requirements.in
     #   langgraph
@@ -2104,9 +2108,9 @@ opentelemetry-instrumentation-lancedb==0.62.4 \
     --hash=sha256:acf992d1922c8492f4ed4a8907acc26a1b2cd4feff8aca7bdef48bc37dac03cd \
     --hash=sha256:d1e2ca10101f4992ff7ba25f13a5ff483f28f54577992f69c3768a73bbba99ec
     # via traceloop-sdk
-opentelemetry-instrumentation-langchain==0.62.4 \
-    --hash=sha256:7727f752c803f6ea59aa6cc0c9617fb461417ea3f8416ee9a0f3c1cb5a33029f \
-    --hash=sha256:d84871c34e4bb972a6047bbed5e891a4d6b97fcb0a188c4713e9ed56b2444ae3
+opentelemetry-instrumentation-langchain==0.63.1 \
+    --hash=sha256:0be00397e77e524d55b2d1b5a0978d538cc69b4cd3be527c49926194f898a1e1 \
+    --hash=sha256:b529b78df5be22f04732f5a7d2fa2ed67d4f447101b20a4e65d3a185de48730b
     # via
     #   -r requirements.in
     #   traceloop-sdk
@@ -2142,9 +2146,9 @@ opentelemetry-instrumentation-ollama==0.62.4 \
     --hash=sha256:2b3bbc92975a8a8ee8bea947c588f1160fbd1ec115c83bba22b4ab52fe799b55 \
     --hash=sha256:fb65f39a22adee2e4c327f8f0fb374c70cd5ccf390a2bf7a5897b62e09f80f4b
     # via traceloop-sdk
-opentelemetry-instrumentation-openai==0.62.4 \
-    --hash=sha256:2a88073a6998d00a4b9371c51760c11679af0c2377511db8fadd1bf6b75d5a84 \
-    --hash=sha256:a2c03cf4b8c18ed5e53d4a59b3299df39858640e41b91379ca72153a3f85a716
+opentelemetry-instrumentation-openai==0.63.1 \
+    --hash=sha256:ea027b12957a7b6cdc4fbf8b0940aafe882487401bf55319137329451cdd25bf \
+    --hash=sha256:f8614a2f1aa2a4b3cd92e77b6136b593fd0a73d7b1e925b9cf9dc4791de663dd
     # via
     #   -r requirements.in
     #   traceloop-sdk
@@ -3044,6 +3048,7 @@ requests==2.34.2 \
     #   opentelemetry-exporter-otlp-proto-http
     #   requests-toolbelt
     #   tiktoken
+    #   traceloop-sdk
 requests-toolbelt==1.0.0 \
     --hash=sha256:7681a0a3d047012b5bdc0ee37d7f8f07ebe76ab08caeccfc3921ce23c88d5bc6 \
     --hash=sha256:cccfdd665f0a24fcf4726e690f65639d272bb0637b9b92dfd91a5568ccf6bd06
@@ -3289,9 +3294,9 @@ tiktoken==0.14.0 \
     --hash=sha256:f5e7665f6624e052e5e7f6a36919ab69279decdc976d7b16b4fa15e1897d0513 \
     --hash=sha256:f702e0aeeb6506e57687e881c59e844ebe8f0a6a097ddafe20e3ab25f387be4e
     # via langchain-openai
-traceloop-sdk==0.62.4 \
-    --hash=sha256:033dbeb200021c4381a3e2aaf8678747b61d85c758ef9e36648e29b16d0d8deb \
-    --hash=sha256:0f7bb433ca1324ab55d099c6aa583c9e7ed1f4d6ad8942ead964965c54b94295
+traceloop-sdk==0.63.1 \
+    --hash=sha256:775504eaad85372c8bcbda730f6982917c3541dbd1a0fbe4a05e04fce54d9393 \
+    --hash=sha256:d7eee0522fdcb6c724abd2a47c30eb47a325551d8f4b490ab817bc83e10560fd
     # via -r requirements.in
 truststore==0.10.5 \
     --hash=sha256:30d36967ccaded5cbb38d602c433f53600036c79d502f4533a49b60a03bbefcd \
@@ -3402,9 +3407,9 @@ uvicorn==0.54.0 \
     # via
     #   fastmcp-slim
     #   mcp
-vcrpy==8.3.0 \
-    --hash=sha256:46d64e77e8d95e5c76c7d9a94ff05d8b38b2ae4e1d4869eb0235024b6fcb5212 \
-    --hash=sha256:bd66e6143746778157f00e2a922527a8d96b2fdc350be8988a45a29c843815b9
+vcrpy==9.4.2 \
+    --hash=sha256:2ffc051adf50d9a83326c8d365c29929cd6788cef647326b55502b59276d443a \
+    --hash=sha256:ae6644e018e0663d4afd7cb232e029b4557ffccac2473b9ad4717f135b010b75
     # via -r requirements.in
 watchfiles==1.3.0 \
     --hash=sha256:000b9688fc8133037a8b075c8ebf98f32844ff8964dda61e85c1db547dafc441 \
